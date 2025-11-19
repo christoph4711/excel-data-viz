@@ -4,6 +4,36 @@
 
 **URL**: https://lovable.dev/projects/2ef52c5a-3217-46df-ac58-ba19373af716
 
+## GitHub Pages Deployment
+
+This project is configured for automatic deployment to GitHub Pages.
+
+### Setup Instructions
+
+1. **Push to GitHub**: Make sure your code is pushed to the `main` branch of your GitHub repository
+
+2. **Enable GitHub Pages**:
+   - Go to your repository settings on GitHub
+   - Navigate to **Pages** (in the left sidebar)
+   - Under **Source**, select **GitHub Actions**
+   - Save the settings
+
+3. **Automatic Deployment**:
+   - Every push to the `main` branch will automatically trigger a deployment
+   - The workflow will build your app and deploy it to GitHub Pages
+   - Your app will be available at: `https://[your-username].github.io/[repository-name]/`
+
+4. **Manual Deployment**:
+   - Go to the **Actions** tab in your GitHub repository
+   - Select the "Deploy to GitHub Pages" workflow
+   - Click "Run workflow" to manually trigger a deployment
+
+### Local Development
+
+The app uses a dynamic base path that works both locally and on GitHub Pages:
+- **Development**: Uses root path `/`
+- **Production**: Automatically uses `/[repository-name]/` based on your GitHub repository
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
@@ -59,10 +89,6 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/2ef52c5a-3217-46df-ac58-ba19373af716) and click on Share -> Publish.
 
 ## Can I connect a custom domain to my Lovable project?
 
