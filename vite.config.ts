@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/excel-data-viz/' : '/',
+  base: mode === 'production' ? (process.env.VITE_BASE_PATH || '/') : '/',
   server: {
     host: "::",
     port: 8080,
